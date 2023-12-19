@@ -28,4 +28,44 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  shared:
+    header:
+      title: "Sell It"
+      add: "Add Product"
+  products:
+    show:
+      edit: 'Edit Product'
+      delete: 'Delete Product'
+    edit:
+      title: 'Edit Product'
+    new:
+      title: 'Add Product'
+    index:
+      title: 'Products'
+    create:
+      created: 'Your product has been created successfully'
+    update:
+      updated: 'Your product has been updated successfully'
+    destroy:
+      destroyed: 'Your product has been deleted successfully'
+  common:
+    confirm: 'Are you sure?'
+  activerecord:
+    models:
+      product: Product
+    attributes:
+      product:
+        title: 'Title'
+        description: 'Description'
+        price: 'Price'
+        photo: 'Photo'
+    errors:
+      models:
+        product:
+          attributes:
+            title:
+              blank: "can't be blank"
+            description:
+              blank: "can't be blank"
+            price:
+              blank: "can't be blank"
