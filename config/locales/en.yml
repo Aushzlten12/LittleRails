@@ -50,6 +50,7 @@ en:
       destroyed: 'Your product has been deleted successfully'
   common:
     confirm: 'Are you sure?'
+    back: 'Go Back'
   activerecord:
     models:
       product: Product
@@ -69,3 +70,20 @@ en:
               blank: "can't be blank"
             price:
               blank: "can't be blank"
+  categories:
+    category:
+      edit: 'Edit'
+      delete: 'Delete'
+    index:
+      title: 'Categories'
+      new: 'Add category'
+    edit:
+      title: 'Edit Category'
+    new:
+      title: 'New Category'
+    create:
+      created: "Category was successfully created."
+    update:
+      updated: "Category was successfully updated."
+    destroy:
+      destroyed: "Category was successfully destroyed."
