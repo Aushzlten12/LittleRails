@@ -2,41 +2,62 @@ es:
   shared:
     header:
       title: "Vendelo"
-      add: "Añadir Producto"
+    add: "Agregar Producto"
   products:
     show:
-      edit: 'Editar Producto'
-      delete: 'Eliminar Producto'
+      edit: "Editar Producto"
+      delete: "Eliminar Producto"
     edit:
-      title: 'Editar Producto'
+      title: "Editar Producto"
     new:
-      title: 'Añadir Producto'
+      title: "Agregar Producto"
     index:
-      title: 'Productos'
+      title: "Productos"
+      all: "Todos"
+      min_price: "Precio mínimo"
+      max_price: "Precio máximo"
     create:
-      created: 'Tu producto se ha creado correctamente'
+      created: "Tu producto se ha creado con éxito"
     update:
-      updated: 'Tu producto se ha actualizado correctamente'
+      updated: "Tu producto se ha actualizado con éxito"
     destroy:
-      destroyed: 'Tu producto se ha eliminado correctamente'
+      destroyed: "Tu producto se ha eliminado con éxito"
   common:
-    confirm: '¿Estás seguro?' 
+    confirm: "¿Estás seguro?"
+    back: "Regresar"
   activerecord:
     models:
       product: Producto
     attributes:
       product:
-        title: 'Título'
-        description: 'Descripción'
-        price: 'Precio'
-        photo: 'Foto'
+        title: "Título"
+        description: "Descripción"
+        price: "Precio"
+        photo: "Foto"
     errors:
       models:
         product:
           attributes:
             title:
-              blank: "no puede estar vacío"
+              blank: "no puede estar en blanco"
             description:
-              blank: "no puede estar vacía"
+              blank: "no puede estar en blanco"
             price:
-              blank: "no puede estar vacío"
+              blank: "no puede estar en blanco"
+  categories:
+    category:
+      edit: "Editar"
+      delete: "Eliminar"
+    index:
+      title: "Categorías"
+      new: "Agregar categoría"
+    edit:
+      title: "Editar Categoría"
+    new:
+      title: "Nueva Categoría"
+    create:
+      created: "La categoría se ha creado con éxito."
+    update:
+      updated: "La categoría se ha actualizado con éxito."
+    destroy:
+      destroyed: "La categoría se ha eliminado con éxito."

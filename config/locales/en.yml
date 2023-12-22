@@ -30,36 +30,39 @@
 en:
   shared:
     header:
-      title: "Sell It"
+      title: "Sell it"
       add: "Add Product"
   products:
     show:
-      edit: 'Edit Product'
-      delete: 'Delete Product'
+      edit: "Edit Product"
+      delete: "Delete Product"
     edit:
-      title: 'Edit Product'
+      title: "Edit Product"
     new:
-      title: 'Add Product'
+      title: "Add Product"
     index:
-      title: 'Products'
+      title: "Products"
+      all: "All"
+      min_price: "Minimum Price"
+      max_price: "Maximum Price"
     create:
-      created: 'Your product has been created successfully'
+      created: "Your product has been created successfully"
     update:
-      updated: 'Your product has been updated successfully'
+      updated: "Your product has been updated successfully"
     destroy:
-      destroyed: 'Your product has been deleted successfully'
+      destroyed: "Your product has been deleted successfully"
   common:
-    confirm: 'Are you sure?'
-    back: 'Go Back'
+    confirm: "Are you sure?"
+    back: "Go Back"
   activerecord:
     models:
       product: Product
     attributes:
       product:
-        title: 'Title'
-        description: 'Description'
-        price: 'Price'
-        photo: 'Photo'
+        title: "Title"
+        description: "Description"
+        price: "Price"
+        photo: "Photo"
     errors:
       models:
         product:
@@ -72,15 +75,15 @@ en:
               blank: "can't be blank"
   categories:
     category:
-      edit: 'Edit'
-      delete: 'Delete'
+      edit: "Edit"
+      delete: "Delete"
     index:
-      title: 'Categories'
-      new: 'Add category'
+      title: "Categories"
+      new: "Add category"
     edit:
-      title: 'Edit Category'
+      title: "Edit Category"
     new:
-      title: 'New Category'
+      title: "New Category"
     create:
       created: "Category was successfully created."
     update:

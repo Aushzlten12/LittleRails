@@ -14,7 +14,7 @@ module Vendelo
     # Please, add to the `ignore` list any other `lib` subdirectories that do
     # not contain `.rb` files, or that should not be reloaded or eager loaded.
     # Common ones are `templates`, `generators`, or `middleware`, for example.
-    config.autoload_lib(ignore: %w(assets tasks))
+    config.autoload_lib(ignore: %w[assets tasks])
 
     # Configuration for the application, engines, and railties goes here.
     #
@@ -27,5 +27,8 @@ module Vendelo
     # config/application.rb
     config.i18n.available_locales = [:en, :es]
     config.i18n.default_locale = :es
+
+    # Allow multiquery
+    config.active_record.async_query_executor = :global_thread_pool
   end
 end
