@@ -46,6 +46,9 @@ en:
       min_price: "Minimum Price"
       max_price: "Maximum Price"
       query_text: "What do you want to search?"
+      expensive: "Expensive first"
+      cheapest: "Cheaper first"
+      newest: "Recently added"
     create:
       created: "Your product has been created successfully"
     update:

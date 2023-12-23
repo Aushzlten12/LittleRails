@@ -1,22 +1,15 @@
 class ProductsController < ApplicationController
   def index
     @categories = Category.order(name: :asc).load_async
-    @products = Product.all.order(:id).with_attached_photo.order(created_at: :desc).load_async
-    if params[:category_id]
-      @products = @products.where(category_id: params[:category_id])
-    end
+    @products = Product.all.with_attached_photo
 
-    if params[:min_price].present?
-      @products = @products.where("price >= ?", params[:min_price])
-    end
+    filter_products_by_category
+    filter_products_by_price_range
+    search_products_by_query_text
 
-    if params[:max_price].present?
-      @products = @products.where("price <= ?", params[:max_price])
-    end
+    order_by = Product::ORDER_BY.fetch(params[:order_by]&.to_sym, Product::ORDER_BY[:newest])
 
-    if params[:query_text].present?
-      @products = @products.search_full_text(params[:query_text])
-    end
+    @products = @products.order(order_by).load_async
   end
 
   def show
@@ -61,4 +54,34 @@ class ProductsController < ApplicationController
   def product
     @product = Product.find(params[:id])
   end
+
+  def filter_products_by_category
+    return unless params[:category_id]
+
+    @products = @products.where(category_id: params[:category_id])
+  end
+
+  def filter_products_by_price_range
+    filter_by_min_price
+    filter_by_max_price
+  end
+
+  def filter_by_min_price
+    return unless params[:min_price].present?
+
+    @products = @products.where("price >= ?", params[:min_price])
+  end
+
+  def filter_by_max_price
+    return unless params[:max_price].present?
+
+    @products = @products.where("price <= ?", params[:max_price])
+  end
+
+  def search_products_by_query_text
+    return unless params[:query_text].present?
+
+    @products = @products.search_full_text(params[:query_text])
+  end
+
 end
