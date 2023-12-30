@@ -1,8 +1,9 @@
 es:
+  app_name: "Vendelo"
+  meta_title: "Compra y vende productos de seguunda mano!"
   shared:
     header:
-      title: "Vendelo"
-    add: "Agregar Producto"
+      add: "Agregar Producto"
   products:
     show:
       edit: "Editar Producto"

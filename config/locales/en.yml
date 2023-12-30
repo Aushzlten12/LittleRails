@@ -28,9 +28,10 @@
 #       enabled: "ON"
 
 en:
+  app_name: "SellIT"
+  meta_title: "Buy and sell second hand products!"
   shared:
     header:
-      title: "Sell it"
       add: "Add Product"
   products:
     show:

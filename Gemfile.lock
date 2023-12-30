@@ -81,6 +81,13 @@ GEM
     backport (1.2.0)
     base64 (0.2.0)
     benchmark (0.3.0)
+    better_html (2.0.2)
+      actionview (>= 6.0)
+      activesupport (>= 6.0)
+      ast (~> 2.0)
+      erubi (~> 1.4)
+      parser (>= 2.4)
+      smart_properties
     bigdecimal (3.1.5)
     bindex (0.8.1)
     bootsnap (1.17.0)
@@ -99,17 +106,25 @@ GEM
     connection_pool (2.4.1)
     crass (1.0.6)
     date (3.3.4)
-    debug (1.9.0)
+    debug (1.9.1)
       irb (~> 1.10)
       reline (>= 0.3.8)
     diff-lcs (1.5.0)
     drb (2.2.0)
       ruby2_keywords
     e2mmap (0.1.0)
+    erb_lint (0.5.0)
+      activesupport
+      better_html (>= 2.0.1)
+      parser (>= 2.7.1.4)
+      rainbow
+      rubocop
+      smart_properties
     erubi (1.12.0)
     ffi (1.16.3)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    htmlbeautifier (1.4.2)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
     image_processing (1.12.2)
@@ -120,7 +135,7 @@ GEM
       activesupport (>= 6.0.0)
       railties (>= 6.0.0)
     io-console (0.7.1)
-    irb (1.10.1)
+    irb (1.11.0)
       rdoc
       reline (>= 0.3.8)
     jaro_winkler (1.5.6)
@@ -148,7 +163,7 @@ GEM
     minitest (5.20.0)
     msgpack (1.7.2)
     mutex_m (0.2.0)
-    net-imap (0.4.8)
+    net-imap (0.4.9)
       date
       net-protocol
     net-pop (0.1.2)
@@ -158,8 +173,9 @@ GEM
     net-smtp (0.4.0)
       net-protocol
     nio4r (2.7.0)
-    nokogiri (1.15.5-x86_64-linux)
+    nokogiri (1.16.0-x86_64-linux)
       racc (~> 1.4)
+    pagy (6.2.0)
     parallel (1.24.0)
     parser (3.2.2.4)
       ast (~> 2.4.1)
@@ -168,7 +184,7 @@ GEM
     pg_search (2.3.6)
       activerecord (>= 5.2)
       activesupport (>= 5.2)
-    psych (5.1.1.1)
+    psych (5.1.2)
       stringio
     public_suffix (5.0.4)
     puma (6.4.0)
@@ -244,6 +260,7 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    smart_properties (1.17.0)
     solargraph (0.50.0)
       backport (~> 1.2)
       benchmark
@@ -303,9 +320,12 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  erb_lint
+  htmlbeautifier
   image_processing (~> 1.2)
   importmap-rails
   jbuilder
+  pagy (~> 6.2)
   pg (~> 1.1)
   pg_search (~> 2.3)
   puma (>= 5.0)
